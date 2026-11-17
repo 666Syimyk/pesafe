@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3e6ff">
+  <meta name="description" content="PeSafe — SOS, экстренные контакты и медицинская карточка. Кыргызстан.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>PeSafe — рядом, когда важно</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="PeSafe — главная"><span class="brand-icon" data-icon="shield"></span>PeSafe<span class="brand-dot">.</span></a>
+      <div class="workspace-label">ЛИЧНАЯ БЕЗОПАСНОСТЬ</div>
+      <nav class="side-nav" aria-label="Основная навигация"></nav>
+      <div class="sidebar-bottom">
+        <div class="private-note"><span data-icon="lock"></span><b>Ваше личное пространство</b><p>Профиль хранится на этом устройстве. Вы решаете, чем делиться.</p></div>
+        <button class="profile-shortcut" data-action="nav" data-page="profile"><span class="avatar" id="sidebarAvatar">Я</span><span><b id="sidebarName">Ваш профиль</b><small>Медицинская карточка</small></span><span data-icon="chevron"></span></button>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span class="breadcrumb">Личное пространство <span>/</span> <b id="pageLabel">Обзор</b></span><a class="mobile-brand" href="#home">PeSafe<span>.</span></a><div class="header-actions"><span class="country"><span class="country-mark"></span> Кыргызстан</span><span id="network" class="network"><i></i> В сети</span><button class="icon-button" data-action="help" aria-label="О приложении"><span data-icon="help"></span></button></div></header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="app-footer"><span>PeSafe · Рядом, когда важно</span><span>Временно: тестовый звонок <a data-emergency-call href="tel:+996221212111">+996 221 212 111</a></span></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Мобильная навигация"></nav>
+  <dialog id="formDialog" class="form-dialog"><div id="dialogContent"></div></dialog>
+  <dialog id="emergencyDialog" class="emergency-dialog" aria-labelledby="emergencyTitle"><div id="emergencyContent"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p>Для PeSafe нужен JavaScript. Для экстренного звонка используйте телефон: 112.</p></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

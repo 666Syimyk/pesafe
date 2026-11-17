@@ -1,0 +1,23 @@
+# Бесплатный хостинг Render (Blueprint). Render сам выдаёт HTTPS-адрес.
+# Инструкция: DEPLOY.md
+services:
+  - type: web
+    name: pesafe
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      # Ключ подключения для приложения генерируется автоматически (см. Environment в Render).
+      - key: DELIVERY_ACCESS_KEY
+        generateValue: true
+      # true — учебный режим (ничего не отправляется). Поставьте false после ввода токена и Chat ID.
+      - key: DELIVERY_DRY_RUN
+        value: "true"
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_IDS
+        sync: false

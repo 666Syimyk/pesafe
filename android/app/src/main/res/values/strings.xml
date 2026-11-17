@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PeSafe</string>
+    <string name="title_activity_main">PeSafe</string>
+    <string name="package_name">kg.pesafe.app</string>
+    <string name="custom_url_scheme">kg.pesafe.app</string>
+</resources>

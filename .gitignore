@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.data/
+test-results/
+playwright-report/
+android/.gradle/
+android/local.properties
+android/app/build/
+ios/App/Pods/
+ios/App/build/
+*.log
+*.zip

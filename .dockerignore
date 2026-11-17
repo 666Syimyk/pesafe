@@ -1,0 +1,11 @@
+.env
+.data
+node_modules
+archive
+android
+ios
+test-results
+playwright-report
+.git
+docs
+dist
